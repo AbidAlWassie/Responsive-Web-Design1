@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <title>Responsive Website</title>
+</head>
+<body>
+  
+<!-- Header Section -->
+  <header>
+    <nav class="navbar">
+        <ul>
+          <li>
+            <div class="menu-btn" id="menuBtn">
+              <div class="btn-line"></div>
+              <div class="btn-line"></div>
+              <div class="btn-line"></div>
+            </div>
+          </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="javascript:void(0)" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <button id="userBtn" type="submit" style="float: right" onclick="onLoginBtnClick()"><i class="fa fa-user"></i></button>
+            <div class="search-container">
+              <form action="#">
+                <input type="text" placeholder="Search.." name="search">
+                <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </ul>
+    </nav>
+
+    <!-- Side Menu -->
+    <div id="side-menu">
+
+      <div class="side-menu-content">
+
+        <div class="search-bar">
+          <form action="#">
+            <input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+        <a href="javascript:void(0)" onclick="onLoginBtnClick()" class="login-btn">Login</a>
+        <a href="javascript:void(0)" onclick="onSignupBtnClick()" class="signup-btn">Sign up</a>
+        <hr class="hline">
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0)" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="modal-background1" class="modal">
+    <!-- Modal content/Form -->
+    <form action="javascript:void(0)" class="modal-content">
+      <div class="upper-container">
+        <span><b>Login to your account</b></span>
+        <span class="close" id="closeBtn1" title="Close">&times;</span>
+      </div>
+      
+      <div class="modal-container" style="background-color: #f1f1f1">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+
+        <div class="modal-container" style="background-color: #f1f1f1">
+          <span class="password"><a href="javascript:void(0)" style="color: #007791;">Forgot password?</a></span>
+          <br>
+          <span id="signupNotifier" style="text-align: center; padding-top: 10px">Don't have an account?</span> 
+          <button id="signupBtn" onclick="onSignupBtnClick()" class="signup-btn" type="button">Sign Up</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="modal-background2" class="modal">
+    <form action="#" class="modal-content">
+      <div class="upper-container">
+        <span><b>Sign up now!</b></span>
+        <span class="close" id="closeBtn2" title="Close">&times;</span>
+      </div>
+      <div class="modal-container" style="background-color: #f1f1f1">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter email" required>
+        <label for="password">Password</label>
+        <input type="Password" placeholder="Enter password" required>
+        <label>
+          <input type="checkbox" checked="checked" name=""> Receive recommendations
+        </label>
+        <button type="submit">Sign up</button>
+        <p><small>By signing up, you agree to our Terms of Use and Privacy Policy.</small></p>
+        <span style="text-align: center">Already have an account? <a id="loginAnchor" href="#" onclick="onLoginBtnClick();">Login</a>
+      </span>
+      </div>
+    </form>
+  </div>
+  
+  <div style="text-align: center;" class="margin-vertical container">
+    <span><i class="icon-paper-plane" style="font-size: 40px;
+      color: #00ADB5;
+      padding: 10px;
+      display: block;
+      margin-bottom: 20px;"></i></span>
+    <h2>Our services</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error incidunt laboriosam maxime sapiente optio velit suscipit quisquam voluptate deleniti magni et laudantium hic tempora ut, quos necessitatibus esse provident sunt?</p>
+  </div>
+
+
+  <div class="container-section-services1">
+    <div class="row">
+      <span><i class="icon-graph"></i></span>
+      <h4>Dashboard</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+    </div>
+    <div class="row">
+      <span><i class="icon-camera"></i></span>
+      <h4>Photography</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+    <div class="row">
+      <span><i class="icon-support"></i></span>
+      <h4>Help & Support</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+    <div class="row">
+      <span><i class="icon-lock"></i></span>
+      <h4>Security</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+    <div class="row">
+      <span><i class="icon-key"></i></span>
+      <h4>Key Constraints</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+    <div class="row">
+      <span><i class="icon-chart"></i></span>
+      <h4>Insights</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+  </div>
+
+  <footer>
+
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="section1 brand">
+          <h3>Brand</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, debitis porro totam expedita autem fugit. Error hic reprehenderit accusantium rem.</p>
+        </div>
+        <div class="section2-f">
+            <h3>Company</h3>
+            <ul class="hyperlink">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Site</a></li>
+              <li><a href="#">Customer Care</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="section3 subscribe">
+          <h3>Subscribe</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem.</p>
+          <form action="#" id="form-subscribe">
+            <div class="form-field" style="position: relative;">
+              <input type="email" placeholder="Email address" id="email">
+              <input type="submit" id="submit" value="Send">
+            </div>
+          </form>
+        </div>
+        <div class="section4">
+          <h3>Follow us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa fa-google"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    <div class="section5">
+      <div class="copyright">
+        <hr class="hlineD">
+        <p style="position: relative; top: 30px;">&copy; 2020 Abid Al-Wasi. All Rights Received. Demo images: <a href="http://www.pexels.com">Pexels</a></p>
+      </div>
+    </div>
+</footer>
+<script>
+  // Slideshow config
+  let sliderImages = document.querySelectorAll('.slide');
+  let arrowLeft = document.querySelector('.icon-arrow-left')
+  let arrowRight = document.querySelector('.icon-arrow-right');
+  let counter = 0;
+  
+  function reset() {
+    for(let i = 0; i < sliderImages.length; i++) {
+      sliderImages[i].style.display = 'none';
+    }
+  }
+
+  console.log(sliderImages);
+  
+  //Init Slider
+  function startSlide() {
+    reset();
+    sliderImages[0].style.display = 'block';
+  }
+  
+  //Show preceding
+  function slideLeft() {
+    reset();
+    sliderImages[counter - 1].style.display = 'block';
+    counter--;
+  }
+  
+  function slideRight() {
+    reset();
+    sliderImages[counter+1].style.display = 'block';
+    counter++;
+  }
+
+  //events
+  arrowLeft.addEventListener('click', onArrowLeftClick);
+  arrowRight.addEventListener('click', onArrowRightClick);
+  
+  //event functions
+  function onArrowLeftClick() {
+  if(counter === 0) {
+    counter = sliderImages.length;
+  }
+  slideLeft();
+  }
+  
+  function onArrowRightClick() {
+    if(counter === sliderImages.length-1) {
+      counter=-1;
+    }
+    slideRight();
+  }
+  
+  startSlide();
+
+  function onLoginBtnClick() {
+    var modal1 = document.getElementById('modal-background1');
+    modal1.style.display = 'block';
+    // if (modal2.style.display === 'block') {
+    //   modal2.style.display = 'none';
+    // }
+  }
+  function onSignupBtnClick() {
+    var modal2 = document.getElementById('modal-background2');
+    modal2.style.display = 'block';
+    // if (modal1.style.display === 'block') {
+    //   modal1.style.display = 'none';
+    // }
+  }
+
+  function onCard1() {
+    location.replace("javascript:void(0)");
+  }
+
+  function onCard2() {
+    location.replace("javascript:void(0)");
+  }
+
+  </script>
+  <script src="js/script.js"></script>
+  <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+</body>
+</html>

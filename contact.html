@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <title>Responsive Website</title>
+</head>
+<body>
+  
+<!-- Header Section -->
+  <header>
+
+    <nav class="navbar">
+        <ul>
+          <li>
+            <div class="menu-btn" id="menuBtn">
+              <div class="btn-line"></div>
+              <div class="btn-line"></div>
+              <div class="btn-line"></div>
+            </div>
+          </li>
+              
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="javascript:void(0)" class="active">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <button id="userBtn" type="submit" style="float: right" onclick="onLoginBtnClick()"><i class="fa fa-user"></i></button>
+            <div class="search-container">
+              <form action="#">
+                <input type="text" placeholder="Search.." name="search">
+                <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </ul>
+    </nav>
+
+    <!-- Side Menu -->
+    <div id="side-menu">
+
+      <div class="side-menu-content">
+
+        <div class="search-bar">
+          <form action="#">
+            <input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+        <a href="javascript:void(0)" onclick="onLoginBtnClick()" class="login-btn">Login</a>
+        <a href="javascript:void(0)" onclick="onSignupBtnClick()" class="signup-btn">Sign up</a>
+        <hr class="hline">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="javascript:void(0)" class="active">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Login Modal -->
+  <!-- Login Modal -->
+  <div id="modal-background1" class="modal">
+    <!-- Modal content/Form -->
+    <form action="javascript:void(0)" class="modal-content">
+      <div class="upper-container">
+        <span><b>Login to your account</b></span>
+        <span class="close" id="closeBtn1" title="Close">&times;</span>
+      </div>
+      
+      <div class="modal-container" style="background-color: #f1f1f1">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+
+        <div class="modal-container" style="background-color: #f1f1f1">
+          <span class="password"><a href="javascript:void(0)" style="color: #007791;">Forgot password?</a></span>
+          <br>
+          <span id="signupNotifier" style="text-align: center; padding-top: 10px">Don't have an account?</span> 
+          <button id="signupBtn" onclick="onSignupBtnClick()" class="signup-btn" type="button">Sign Up</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="modal-background2" class="modal">
+    <form action="#" class="modal-content">
+      <div class="upper-container">
+        <span><b>Sign up now!</b></span>
+        <span class="close" id="closeBtn2" title="Close">&times;</span>
+      </div>
+      <div class="modal-container" style="background-color: #f1f1f1">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter email" required>
+        <label for="password">Password</label>
+        <input type="Password" placeholder="Enter password" required>
+        <label>
+          <input type="checkbox" checked="checked" name=""> Receive recommendations
+        </label>
+        <button type="submit">Sign up</button>
+        <p><small>By signing up, you agree to our Terms of Use and Privacy Policy.</small></p>
+        <span style="text-align: center">Already have an account? <a id="loginAnchor" href="#" onclick="onLoginBtnClick();">Login</a>
+      </span>
+      </div>
+    </form>
+  </div>
+  
+  <section class="section-img-hig" style="background-image: url(img/contact-1.jpg);">
+    <div class="text-area">
+      <h2>Get in touch</h3>
+    </div>
+  </section>
+
+  <section>
+    <div class="container margin-vertical">
+      <div class="row contact-section1">
+        <div class="row">
+          <form action="#">
+            <div class="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Name" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <input type="text" placeholder="Email" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Message" id="" cols="30" rows="10" class="form-control" style="width: 100%;"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-custom1">
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <h3>Our Address</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores, porro assumenda necessitatibus similique nisi debitis officia a quae omnis.</p>
+          <ul class="contact-lists">
+            <li><i class="fa fa-map-marker"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
+            <li><i class="fa fa-phone"></i>+ 1235 2355 98</li>
+            <li><i class="fa fa-envelope"></i>info@yoursite.com</li>
+            <li><i class="fa fa-globe"></i>www.yoursite.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="map"></div>
+
+  <footer>
+
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="section1 brand">
+          <h3>Brand</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, debitis porro totam expedita autem fugit. Error hic reprehenderit accusantium rem.</p>
+        </div>
+        <div class="section2-f">
+            <h3>Company</h3>
+            <ul class="hyperlink">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Site</a></li>
+              <li><a href="#">Customer Care</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="section3 subscribe">
+          <h3>Subscribe</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem.</p>
+          <form action="#" id="form-subscribe">
+            <div class="form-field" style="position: relative;">
+              <input type="email" placeholder="Email address" id="email">
+              <input type="submit" id="submit" value="Send">
+            </div>
+          </form>
+        </div>
+        <div class="section4">
+          <h3>Follow us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa fa-google"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    <div class="section5">
+      <div class="copyright">
+        <hr class="hlineD">
+        <p style="position: relative; top: 30px;">&copy; 2020 Abid Al-Wasi. All Rights Received. Demo images: <a href="http://www.pexels.com">Pexels</a></p>
+      </div>
+    </div>
+</footer>
+  <script>
+  function onLoginBtnClick() {
+    var modal1 = document.getElementById('modal-background1');
+    modal1.style.display = 'block';
+    // if (modal2.style.display === 'block') {
+    //   modal2.style.display = 'none';
+    // }
+  }
+  function onSignupBtnClick() {
+    var modal2 = document.getElementById('modal-background2');
+    modal2.style.display = 'block';
+    // if (modal1.style.display === 'block') {
+    //   modal1.style.display = 'none';
+    // }
+  }
+
+  function initMap() {
+    var ourLocation = {lat: 26.106198, lng: 88.824064};
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+  </script>
+  <script src="js/script.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&callback=initMap"
+  type="text/javascript"></script>
+  
+  <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+</body>
+</html>

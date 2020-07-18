@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <title>Responsive Website</title>
+</head>
+<body>
+  
+<!-- Header Section -->
+ <header>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <div class="menu-btn" id="menuBtn">
+                  <div class="btn-line"></div>
+                  <div class="btn-line"></div>
+                  <div class="btn-line"></div>
+                </div>
+              </li>
+            <li><a href="javascript:void(0)" class="brand">Brand</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <button id="userBtn" type="submit" style="float: right" onclick="onLoginBtnClick()"><i class="fa fa-user"></i></button>
+            <div class="search-container">
+              <form action="#">
+                <input type="text" placeholder="Search.." name="search">
+                <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </ul>
+    </nav>
+
+    <!-- Side Menu -->
+    <div id="side-menu">
+
+      <div class="side-menu-content">
+
+        <div class="search-bar">
+          <form action="#">
+            <input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+        <a href="javascript:void(0)" onclick="onLoginBtnClick()" class="login-btn">Login</a>
+        <a href="javascript:void(0)" onclick="onSignupBtnClick()" class="signup-btn">Sign up</a>
+        <hr class="hline">
+        <a href="javascript:void(0)" class="active">Brand</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="modal-background1" class="modal">
+  <!-- Modal content/Form -->
+    <form action="javascript:void(0)" class="modal-content">
+      <div class="upper-container">
+        <span><b>Login to your account</b></span>
+        <span class="close" id="closeBtn1" title="Close">&times;</span>
+      </div>
+      
+      <div class="modal-container" style="background-color: #f1f1f1">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+
+        <div class="modal-container" style="background-color: #f1f1f1">
+          <span class="password"><a href="javascript:void(0)" style="color: #007791;">Forgot password?</a></span>
+          <br>
+          <span id="signupNotifier" style="text-align: center; padding-top: 10px">Don't have an account?</span> 
+          <button id="signupBtn" onclick="onSignupBtnClick()" class="signup-btn" type="button">Sign Up</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="modal-background2" class="modal">
+    <form action="#" class="modal-content">
+      <div class="upper-container">
+        <span><b>Sign up now!</b></span>
+        <span class="close" id="closeBtn2" title="Close">&times;</span>
+      </div>
+      <div class="modal-container" style="background-color: #f1f1f1">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter email" required>
+        <label for="password">Password</label>
+        <input type="Password" placeholder="Enter password" required>
+        <label>
+          <input type="checkbox" checked="checked" name=""> Receive recommendations
+        </label>
+        <button type="submit">Sign up</button>
+        <p><small>By signing up, you agree to our Terms of Use and Privacy Policy.</small></p>
+        <span style="text-align: center">Already have an account? <a id="loginAnchor" href="#" onclick="onLoginBtnClick();">Login</a>
+      </span>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Slider -->
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img class="sliderImg" src="img/img-1.jpg" alt="" draggable="false">
+      <img class="sliderImg" src="img/img-2.jpg" alt="" draggable="false">
+      <img class="sliderImg" src="img/img-3.jpg" alt="" draggable="false">
+      <img class="sliderImg" src="img/img-4.jpg" alt="" draggable="false">
+      <img class="sliderImg" src="img/img-5.jpg" alt="" draggable="false">
+    </div>
+  </div>
+  <span id="prevBtn" class="icon-arrow-left"></span>
+  <span id="nextBtn" class="icon-arrow-right"></span>
+
+    <div class="carousel-nav">
+      <a draggable="false" href="javascript:void(0)" class="slider-indicator"></a>
+      <a draggable="false" href="javascript:void(0)" class="slider-indicator"></a>
+      <a draggable="false" href="javascript:void(0)" class="slider-indicator"></a>
+      <a draggable="false" href="javascript:void(0)" class="slider-indicator"></a>
+      <a draggable="false" href="javascript:void(0)" class="slider-indicator"></a>
+    </div>
+  
+    <div class="container-features-section1">
+      <div class="f-section1">
+        <div class="desc">
+          <h3>About Us</h3>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <!-- <a href="javascript:void(0)">Read more</a> -->
+        </div>
+        
+        <div class="card" onclick="onCard1()">
+            <img src="img/project-1.jpg" alt="" class="cardImg">
+            <div class="cardText">
+              <h3>Card title</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="onCard2()">
+          <img src="img/project-2.jpg" alt="" class="cardImg">
+          <div class="cardText">
+            <h3>Card title</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        
+        <div class="desc" style="background: #046fdb;">
+            <h3>
+              <blockquote>
+                Client Says
+              </blockquote>
+            </h3>
+            <i></i>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            <br> </p>
+            <a href="javascript:void(0)" class="anchorWhite">— John Doe</a>
+        </div>
+      </div>
+        <div class="f-section2" style="background: #eaecee; color: #000;">
+          <h2>Site Features</h2>
+          <div class="features-inner">
+            <i class="icon-chart"></i>
+            <h3>Wordpress Themes</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima corrupti hic est? Sint tempora iusto libero excepturi culpa.</p>
+          </div>
+          <div class="features-inner">
+            <i class="icon-screen-tablet"></i>
+            <h3>Responsive Layout</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta qui placeat sunt ea atque omnis neque. Nesciunt veritatis impedit itaque?</p>
+          </div>
+          <div class="features-inner"><i class="icon-layers"></i>
+          <h3>Layered PSD Templates</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit unde provident eaque quis, rem vitae. Laudantium asperiores velit voluptates accusamus quidem temporibus minus? Vel.</p>
+      </div>
+        </div>
+    </div>
+    <div style="text-align: center;" class="margin-vertical container">
+      <span><i class="icon-paper-plane" style="font-size: 40px;
+        color: #00ADB5;
+        padding: 10px;
+        display: block;
+        margin-bottom: 20px;"></i></span>
+      <h1>Our services</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error incidunt laboriosam maxime sapiente optio velit suscipit quisquam voluptate deleniti magni et laudantium hic tempora ut, quos necessitatibus esse provident sunt?</p>
+    </div>
+  
+  
+    <div class="container-section-services1">
+      <div class="row">
+        <span><i class="icon-graph"></i></span>
+        <h2>Dashboard</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      </div>
+      <div class="row">
+        <span><i class="icon-camera"></i></span>
+        <h2>Photography</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+      <div class="row">
+        <span><i class="icon-support"></i></span>
+        <h2>Help & Support</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+      <div class="row">
+        <span><i class="icon-lock"></i></span>
+        <h2>Security</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+      <div class="row">
+        <span><i class="icon-key"></i></span>
+        <h2>Key Constraints</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+      <div class="row">
+        <span><i class="icon-chart"></i></span>
+        <h2>Insights</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+    </div>
+
+    <div class="project-portfolio">
+      <div class="point-left bg-lightred">
+        <div class="desc">
+          <h2>Our projects</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/project-1.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="img/project-2.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="img/project-3.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="img/project-4.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="img/project-5.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="img/project-6.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="img/project-2.jpg" class="cardImg" alt="">
+        <div class="cardText">
+          <h3>Card title</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <div class="pricingTable">
+      <div style="text-align: center;" class="padding-vertical container">
+        <span><i class="icon-wallet" style="font-size: 40px;
+          color: #00ADB5;
+          padding: 10px;
+          display: block;
+          margin-bottom: 20px;"></i></span>
+        <h1>Pricing</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error incidunt laboriosam maxime sapiente optio velit suscipit quisquam voluptate deleniti magni et laudantium hic tempora ut, quos necessitatibus esse provident sunt?</p>
+      </div>
+      <div class="pricingTableContainer">
+        
+        <div class="pricingTableRow">
+          <h3 class="pricingPack">Starter</h3>
+          <div class="priceTag">
+            <sup class="currency">$</sup>7<small>/mo</small>
+          </div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <hr>
+    
+          <ul class="pricingInfo">
+            <li>10 Projects</li>
+            <li>20 Pages</li>
+            <li>20 Emails</li>
+            <li>100 Images</li>
+          </ul>
+    
+          <a href="javascript:void(0)">Buy now</a>
+    
+        </div>
+    
+        <div class="pricingTableRow">
+          <h3 class="pricingPack">Regular</h3>
+          <div class="priceTag">
+            <sup class="currency">$</sup>19<small>/mo</small>
+          </div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <hr>
+    
+          <ul class="pricingInfo">
+            <li>15 Projects</li>
+            <li>40 Pages</li>
+            <li>40 Emails</li>
+            <li>200 Images</li>
+          </ul>
+    
+          <a href="javascript:void(0)">Buy now</a>
+    
+        </div>
+    
+        <div class="pricingTableRow">
+          <h3 class="pricingPack">Plus</h3>
+          <div class="priceTag">
+            <sup class="currency">$</sup>79<small>/mo</small>
+          </div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <hr>
+    
+          <ul class="pricingInfo">
+            <li>Unlimited Projects</li>
+            <li>100 Pages</li>
+            <li>100 Emails</li>
+            <li>700 Images</li>
+          </ul>
+          <a href="javascript:void(0)">Buy now</a>
+        </div>
+          
+        <div class="pricingTableRow">
+          <h3 class="pricingPack">Enterprise</h3>
+          <div class="priceTag">
+            <sup class="currency">$</sup>125<small>/mo</small>  
+          </div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <hr> 
+          <ul class="pricingInfo">
+            <li>Unlimited Projects</li>
+            <li>Unlimited Pages</li>
+            <li>Unlimited Emails</li>
+            <li>Unlimited Images</li>
+          </ul>
+          <a href="javascript:void(0)">Buy now</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-img-med" style="background-image: url(img/hero.jpg);">
+      <div class="overlay"></div>
+      <div class="container testimony-container" data-aos="fade-up">
+        <div class="testimony1 text-center row">
+          <span class="quote">
+            <i class="fa fa-quote-right"></i>
+          </span>
+          <blockquote>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <span>Athan Smith, via <a href="#" class="review-platform">
+              <svg class="twitter-icon" width="64" height="64" viewBox="0 0 64 64" fill="" xmlns="https://www.w3.org/2000/svg" aria-hidden="true"><path d="M60,15.2c-2.1,0.9-4.3,1.5-6.6,1.7c2.4-1.4,4.2-3.6,5.1-6.1c-2.2,1.3-4.7,2.2-7.3,2.7 c-2.1-2.2-5.1-3.5-8.4-3.5c-6.3,0-11.5,5-11.5,11.1c0,0.9,0.1,1.7,0.3,2.5C22,23.2,13.6,18.8,7.9,12c-1,1.6-1.6,3.5-1.6,5.6 c0,3.9,2,7.3,5.1,9.2c-1.9-0.1-3.7-0.6-5.2-1.4v0.1c0,5.4,4,9.9,9.2,10.9c-1,0.3-2,0.4-3,0.4c-0.7,0-1.5-0.1-2.2-0.2 c1.5,4.4,5.7,7.6,10.7,7.7c-3.9,3-8.9,4.8-14.3,4.8c-0.9,0-1.8-0.1-2.7-0.2c5.1,3.2,11.1,5,17.6,5c21.1,0,32.7-16.9,32.7-31.6 c0-0.5,0-1,0-1.4C56.5,19.4,58.5,17.4,60,15.2"></path></svg>
+            </a></span>
+          </blockquote>
+        </div>
+        
+        <div class="testimony1 text-center row">
+          <span class="quote">
+            <i class="fa fa-quote-right"></i>
+          </span>
+          <blockquote>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <span>Athan Smith, via <a href="#" class="review-platform">
+              <svg class="facebook-icon" width="64" height="64" viewBox="0 0 64 64" fill="" xmlns="https://www.w3.org/2000/svg" aria-hidden="true"><path d="M56,5.1H8c-1.6,0-3,1.4-3,3v48.8c0,1.7,1.3,3,3,3h25.9V38.7h-7v-8.3h7v-6.1 c0-7.1,4.3-10.9,10.5-10.9c3,0,5.9,0.2,6.7,0.3v7.7h-4.7c-3.4,0-4.1,1.6-4.1,4v5h8.1l-1,8.3h-7v21.2H56c1.6,0,3-1.4,3-3V8.1 C59,6.4,57.7,5.1,56,5.1"></path></svg>
+            </a></span>
+          </blockquote>
+        </div>
+
+      </div>
+    </section>
+
+  <footer>
+
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="section1 brand">
+            <h3>Brand</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, debitis porro totam expedita autem fugit. Error hic reprehenderit accusantium rem.</p>
+          </div>
+          <div class="section2-f">
+              <h3>Company</h3>
+              <ul class="hyperlink">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Site</a></li>
+                <li><a href="#">Customer Care</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="section3 subscribe">
+            <h3>Subscribe</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem.</p>
+            <form action="#" id="form-subscribe">
+              <div class="form-field" style="position: relative;">
+                <input type="email" placeholder="Email address" id="email">
+                <input type="submit" id="submit" value="Send">
+              </div>
+            </form>
+          </div>
+          <div class="section4">
+            <h3>Follow us</h3>
+            <ul class="social-icons">
+              <li>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section5">
+        <div class="copyright">
+          <hr class="hlineD">
+          <p style="position: relative; top: 30px;">&copy; 2020 Abid Al-Wasi. All Rights Received. Demo images: <a href="http://www.pexels.com">Pexels</a></p>
+        </div>
+      </div>
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+
+    AOS.init({offset: 400, duration: 300});
+    
+  // Slideshow config
+  let sliderImages = document.querySelectorAll('.slide');
+  let arrowLeft = document.querySelector('.icon-arrow-left')
+  let arrowRight = document.querySelector('.icon-arrow-right');
+  let counter = 0;
+  
+  function reset() {
+    for(let i = 0; i < sliderImages.length; i++) {
+      sliderImages[i].style.display = 'none';
+    }
+  }
+
+  console.log(sliderImages);
+  
+  //Init Slider
+  function startSlide() {
+    reset();
+    sliderImages[0].style.display = 'block';
+  }
+  
+  //Show preceding
+  function slideLeft() {
+    reset();
+    sliderImages[counter - 1].style.display = 'block';
+    counter--;
+  }
+  
+  function slideRight() {
+    reset();
+    sliderImages[counter+1].style.display = 'block';
+    counter++;
+  }
+
+  //events
+  arrowLeft.addEventListener('click', onArrowLeftClick);
+  arrowRight.addEventListener('click', onArrowRightClick);
+  
+  //event functions
+  function onArrowLeftClick() {
+  if(counter === 0) {
+    counter = sliderImages.length;
+  }
+  slideLeft();
+  }
+  
+  function onArrowRightClick() {
+    if(counter === sliderImages.length-1) {
+      counter=-1;
+    }
+    slideRight();
+  }
+  
+  startSlide();
+
+  function onLoginBtnClick() {
+    var modal1 = document.getElementById('modal-background1');
+    modal1.style.display = 'block';
+    // if (modal2.style.display === 'block') {
+    //   modal2.style.display = 'none';
+    // }
+  }
+  function onSignupBtnClick() {
+    var modal2 = document.getElementById('modal-background2');
+    modal2.style.display = 'block';
+    // if (modal1.style.display === 'block') {
+    //   modal1.style.display = 'none';
+    // }
+  }
+
+  function onCard1() {
+    location.replace("javascript:void(0)");
+  }
+
+  function onCard2() {
+    location.replace("javascript:void(0)");
+  }
+
+  </script>
+  <script src="js/script.js"></script>
+  <!-- <script src="js/sliderConfig.js"></script> -->
+  <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+</body>
+</html>
