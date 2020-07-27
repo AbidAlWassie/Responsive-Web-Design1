@@ -6,10 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media-queries.css">
+  <style>
+    .navbar a {
+      color: #222;
+    }
+  </style>
+  <script src="js/aos.js"></script>
   <title>Responsive Website</title>
 </head>
 <body>
-  
 <!-- Header Section -->
  <header>
     <nav class="navbar">
@@ -21,10 +26,10 @@
                   <div class="btn-line"></div>
                 </div>
               </li>
-            <li><a href="javascript:void(0)" class="brand">Brand</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="javascript:void(0)" class="brand navLink text-dark">Brand</a></li>
+            <li><a href="services.html" class="navLink text-dark">Services</a></li>
+            <li><a href="contact.html" class="navLink text-dark">Contact</a></li>
+            <li><a href="about.html" class="navLink text-dark">About</a></li>
             <button id="userBtn" type="submit" style="float: right" onclick="onLoginBtnClick()"><i class="fa fa-user"></i></button>
             <div class="search-container">
               <form action="#">
@@ -37,9 +42,7 @@
 
     <!-- Side Menu -->
     <div id="side-menu">
-
       <div class="side-menu-content">
-
         <div class="search-bar">
           <form action="#">
             <input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button>
@@ -108,7 +111,7 @@
         </label>
         <button type="submit">Sign up</button>
         <p><small>By signing up, you agree to our Terms of Use and Privacy Policy.</small></p>
-        <span style="text-align: center">Already have an account? <a id="loginAnchor" href="#" onclick="onLoginBtnClick();">Login</a>
+        <span style="text-align: center">Already have an account? <a id="loginAnchor" href="javascript:void(0)" onclick="onLoginBtnClick();">Login</a>
       </span>
       </div>
     </form>
@@ -136,7 +139,7 @@
     </div>
   
     <div class="container-features-section1">
-      <div class="f-section1">
+      <div class="f-section1" data-aos="fade-right" data-aos-delay="0">
         <div class="desc">
           <h3>About Us</h3>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -171,7 +174,7 @@
             <a href="javascript:void(0)" class="anchorWhite">— John Doe</a>
         </div>
       </div>
-        <div class="f-section2" style="background: #eaecee; color: #000;">
+        <div class="f-section2" style="background: #eaecee; color: #000;" data-aos="fade-left" data-aos-delay="0">
           <h2>Site Features</h2>
           <div class="features-inner">
             <i class="icon-chart"></i>
@@ -189,7 +192,7 @@
       </div>
         </div>
     </div>
-    <div style="text-align: center;" class="margin-vertical container">
+    <div style="text-align: center;" class="margin-vertical container" data-aos="fade-up">
       <span><i class="icon-paper-plane" style="font-size: 40px;
         color: #00ADB5;
         padding: 10px;
@@ -201,36 +204,36 @@
   
   
     <div class="container-section-services1">
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
         <span><i class="icon-graph"></i></span>
         <h2>Dashboard</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
       </div>
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="200"">
         <span><i class="icon-camera"></i></span>
         <h2>Photography</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="300">
         <span><i class="icon-support"></i></span>
         <h2>Help & Support</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="400">
         <span><i class="icon-lock"></i></span>
         <h2>Security</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="500"">
         <span><i class="icon-key"></i></span>
         <h2>Key Constraints</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="600">
         <span><i class="icon-chart"></i></span>
         <h2>Insights</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
     </div>
 
-    <div class="project-portfolio">
+    <div class="project-portfolio" data-aos="fade-up" data-aos-delay>
       <div class="point-left bg-lightred">
-        <div class="desc">
+        <div class="desc" data-aos="fade-up" data-aos-delay="100">
           <h2>Our projects</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
@@ -291,13 +294,11 @@
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
-      
-      
     </div>
 
-    <div class="pricingTable">
-      <div style="text-align: center;" class="padding-vertical container">
-        <span><i class="icon-wallet" style="font-size: 40px;
+    <div class="pricingTable" >
+      <div style="text-align: center;" class="padding-vertical container" data-aos="fade-up" data-aos-delay="">
+        <span ><i class="icon-wallet" style="font-size: 40px;
           color: #00ADB5;
           padding: 10px;
           display: block;
@@ -305,8 +306,8 @@
         <h1>Pricing</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error incidunt laboriosam maxime sapiente optio velit suscipit quisquam voluptate deleniti magni et laudantium hic tempora ut, quos necessitatibus esse provident sunt?</p>
       </div>
-      <div class="pricingTableContainer">
-        
+
+      <div class="pricingTableContainer" data-aos="fade-up" data-aos-delay="100">
         <div class="pricingTableRow">
           <h3 class="pricingPack">Starter</h3>
           <div class="priceTag">
@@ -321,12 +322,11 @@
             <li>20 Emails</li>
             <li>100 Images</li>
           </ul>
-    
           <a href="javascript:void(0)">Buy now</a>
     
         </div>
     
-        <div class="pricingTableRow">
+        <div class="pricingTableRow" data-aos="fade-up" data-aos-delay="200">
           <h3 class="pricingPack">Regular</h3>
           <div class="priceTag">
             <sup class="currency">$</sup>19<small>/mo</small>
@@ -345,7 +345,7 @@
     
         </div>
     
-        <div class="pricingTableRow">
+        <div class="pricingTableRow" data-aos="fade-up" data-aos-delay="300">
           <h3 class="pricingPack">Plus</h3>
           <div class="priceTag">
             <sup class="currency">$</sup>79<small>/mo</small>
@@ -362,7 +362,7 @@
           <a href="javascript:void(0)">Buy now</a>
         </div>
           
-        <div class="pricingTableRow">
+        <div class="pricingTableRow" data-aos="fade-up" data-aos-delay="400">
           <h3 class="pricingPack">Enterprise</h3>
           <div class="priceTag">
             <sup class="currency">$</sup>125<small>/mo</small>  
@@ -383,7 +383,7 @@
     <section class="section-img-med" style="background-image: url(img/hero.jpg);">
       <div class="overlay"></div>
       <div class="container testimony-container" data-aos="fade-up">
-        <div class="testimony1 text-center row">
+        <div class="testimony1 text-center row" data-aos="fade-up" data-aos-delay="100">
           <span class="quote">
             <i class="fa fa-quote-right"></i>
           </span>
@@ -395,7 +395,7 @@
           </blockquote>
         </div>
         
-        <div class="testimony1 text-center row">
+        <div class="testimony1 text-center row" data-aos="fade-up" data-aos-delay="200">
           <span class="quote">
             <i class="fa fa-quote-right"></i>
           </span>
@@ -411,7 +411,6 @@
     </section>
 
   <footer>
-
       <div class="footer-container">
         <div class="footer-content">
           <div class="section1 brand">
@@ -453,14 +452,14 @@
       <div class="section5">
         <div class="copyright">
           <hr class="hlineD">
-          <p style="position: relative; top: 30px;">&copy; 2020 Abid Al-Wasi. All Rights Received. Demo images: <a href="http://www.pexels.com">Pexels</a></p>
+          <p style="position: relative; top: 30px;">&copy; 2020 Abid Al-Wasi. All Rights Received. Demo images: <a href="http://www.pexels.com">Pexels</a> & <a href="https://unsplash.com/">Upsplash</a></p>
         </div>
       </div>
   </footer>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
   <script>
 
-    AOS.init({offset: 400, duration: 300});
+    AOS.init({offset: 80, duration: 400});
     
   // Slideshow config
   let sliderImages = document.querySelectorAll('.slide');

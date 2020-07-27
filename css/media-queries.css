@@ -58,6 +58,12 @@
   .carousel-container {
     height: 500px;
   }
+
+  img.sliderImg {
+    height: 500px;
+    width: 1000px;
+  }
+
   #prevBtn, #nextBtn {
     top: 27%;
   }
@@ -77,13 +83,22 @@
     height: 350px;
   }
   #prevBtn, #nextBtn {
-    top: 23%;
+    top: 26%;
   }
 }
 
 
 /* mobile view */
 @media screen and (max-width: 770px) {
+  .carousel-container {
+    height: 420px;
+  }
+
+  img.sliderImg {
+    height: 420px;
+    width: 750px;
+  }
+
   .contact-form {
     grid-template-columns: 1fr;
   }

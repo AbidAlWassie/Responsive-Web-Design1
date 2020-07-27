@@ -1,5 +1,45 @@
 window.onload = function() {
 
+  
+
+  var navbar = document.querySelector(".navbar");
+  var navLink = document.querySelector(".navLink");
+
+  
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      window.onscroll = function() {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+          navbar.style.padding = "0 10px";
+          navbar.className = "navbar navbar-fixed text-dark";
+        } else {
+          navbar.style.padding = "20px 10px";
+          navbar.className ="navbar";
+        }
+      }
+      // document.body.style.backgroundColor = "yellow";
+    } else {
+    //  document.body.style.backgroundColor = "pink";
+    }
+  }
+  
+  var x = window.matchMedia("(min-width: 770px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction)
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+      navbar.style.padding = "0 10px";
+      navbar.className = "navbar navbar-fixed text-dark";
+    } else {
+      navbar.style.padding = "20px 10px";
+      navbar.className ="navbar";
+    }
+  }
+
   const menuBtn = document.querySelector(".menu-btn");
 
   let showMenu = false;
@@ -81,9 +121,9 @@ window.onload = function() {
 
   function functionQuery(maxWidth) {
     if (maxWidth.matches) {
-      // sideMenu.className = "hide";
       openSlide.className = "menu-btn";
       showMenu = false;
+      // sideMenu.className = "hide";
     } else {
       sideMenu.style.transform = 'translateY(-600px)';
       openSlide.className = "menu-btn close";
@@ -110,7 +150,9 @@ window.onload = function() {
 
   const slideSize = carouselImages[0].clientWidth;
 
-  
+  if (counter == 0 || 4) {
+    navbar.className ="navbar text-dark";
+  }
 
   // Move the Slider
   function moveSlide() {
@@ -143,7 +185,7 @@ window.onload = function() {
         moveSlide();
         resetIndicators()
       }
-    }, 3000);
+    }, 4000);
   }
 
 
@@ -240,6 +282,10 @@ window.onload = function() {
       sliderIndicator[0].classList.remove("active-slide");
       moveSlide();
       // carouselSlide.style.transition = "transform 0.2s";
+    }
+    if (counter == 1) {
+      navLink.classList.add("text-default");
+      navLink.classList.remove("text-dark");
     }
     
   });
