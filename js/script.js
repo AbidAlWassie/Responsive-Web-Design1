@@ -1,12 +1,9 @@
 window.onload = function() {
 
-  
-
   var navbar = document.querySelector(".navbar");
   var navLink = document.querySelector(".navLink");
 
-  
-  function myFunction(x) {
+  function onMinMobileWidth(x) {
     if (x.matches) { // If media query matches
       window.onscroll = function() {
         scrollFunction()
@@ -20,25 +17,14 @@ window.onload = function() {
           navbar.className ="navbar";
         }
       }
-      // document.body.style.backgroundColor = "yellow";
-    } else {
-    //  document.body.style.backgroundColor = "pink";
     }
   }
   
   var x = window.matchMedia("(min-width: 770px)")
-  myFunction(x) // Call listener function at run time
-  x.addListener(myFunction)
+  onMinMobileWidth(x) // Call listener function at run time
+  x.addListener(onMinMobileWidth)
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-      navbar.style.padding = "0 10px";
-      navbar.className = "navbar navbar-fixed text-dark";
-    } else {
-      navbar.style.padding = "20px 10px";
-      navbar.className ="navbar";
-    }
-  }
+
 
   const menuBtn = document.querySelector(".menu-btn");
 

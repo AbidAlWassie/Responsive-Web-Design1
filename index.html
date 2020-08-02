@@ -10,6 +10,10 @@
     .navbar a {
       color: #222;
     }
+    ::selection {
+      color: #fcfcfc;
+      background: #00ADB5;
+    }
   </style>
   <script src="js/aos.js"></script>
   <title>Responsive Website</title>
@@ -26,10 +30,10 @@
                   <div class="btn-line"></div>
                 </div>
               </li>
-            <li><a href="javascript:void(0)" class="brand navLink text-dark">Brand</a></li>
-            <li><a href="services.html" class="navLink text-dark">Services</a></li>
-            <li><a href="contact.html" class="navLink text-dark">Contact</a></li>
-            <li><a href="about.html" class="navLink text-dark">About</a></li>
+            <li><a draggable="false" href="javascript:void(0)" class="brand navLink text-dark">Brand</a></li>
+            <li><a draggable="false" href="services.html" class="navLink text-dark">Services</a></li>
+            <li><a draggable="false" href="contact.html" class="navLink text-dark">Contact</a></li>
+            <li><a draggable="false" href="about.html" class="navLink text-dark">About</a></li>
             <button id="userBtn" type="submit" style="float: right" onclick="onLoginBtnClick()"><i class="fa fa-user"></i></button>
             <div class="search-container">
               <form action="#">
@@ -322,7 +326,7 @@
             <li>20 Emails</li>
             <li>100 Images</li>
           </ul>
-          <a href="javascript:void(0)">Buy now</a>
+          <button class="btn-primary">Buy now</button>
     
         </div>
     
@@ -341,7 +345,7 @@
             <li>200 Images</li>
           </ul>
     
-          <a href="javascript:void(0)">Buy now</a>
+          <button class="btn-primary">Buy now</button>
     
         </div>
     
@@ -359,7 +363,7 @@
             <li>100 Emails</li>
             <li>700 Images</li>
           </ul>
-          <a href="javascript:void(0)">Buy now</a>
+          <button class="btn-primary">Buy now</button>
         </div>
           
         <div class="pricingTableRow" data-aos="fade-up" data-aos-delay="400">
@@ -375,7 +379,7 @@
             <li>Unlimited Emails</li>
             <li>Unlimited Images</li>
           </ul>
-          <a href="javascript:void(0)">Buy now</a>
+          <button class="btn-primary">Buy now</button>
         </div>
       </div>
     </div>
