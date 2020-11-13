@@ -1264,13 +1264,13 @@ footer #form-subscribe input[type="submit"] {
 /* mobile view */
 @media screen and (max-width: 770px) {
   .navbar {
-    width: 92.6vw !important;
+    width: 99.4vw !important;
     height: 55px;
     position: fixed;
     z-index: 5;
     background: #eee;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 0;
     /* padding: 0; */
     /* padding-right: 800px; */
   }
