@@ -332,10 +332,14 @@ button {
   position: fixed;
   top: 0;
   z-index: 3;
-  width: 100%;
+  width: 100% !important;
   height: 55px;
   padding: 20px 10px;
   background: rgba(39, 39, 39, 0);
+}
+
+.navbar .menu-btn {
+  position: absolute;
 }
 
 
@@ -1260,6 +1264,7 @@ footer #form-subscribe input[type="submit"] {
 /* mobile view */
 @media screen and (max-width: 770px) {
   .navbar {
+    width: 92.6vw !important;
     height: 55px;
     position: fixed;
     z-index: 5;
@@ -1276,7 +1281,6 @@ footer #form-subscribe input[type="submit"] {
 
   .navbar .menu-btn {
     display: block;
-    position: fixed;
     margin: auto 0 auto auto;
   }
   .navbar a:not(.brand) {

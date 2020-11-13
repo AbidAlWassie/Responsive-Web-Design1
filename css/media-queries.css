@@ -1,3 +1,12 @@
+@media screen and (max-width: 560px) {
+  .carousel-container, .container-features-section1, .container-section-services1, .project-portfolio, .pricingTable, .section-img-med, .f-section2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100% !important;
+  }
+
+}
+
 @media screen and (min-width: 1400px) {
   .slide-content {
     /* height: 700px; */
