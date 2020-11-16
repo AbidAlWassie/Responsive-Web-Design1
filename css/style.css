@@ -178,10 +178,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-img-hig {
-  height: 920px;
-  background-position: top;
-  position: relative;
-  top: -26px;
+  height: 100vh;
+  /*background-position: top;*/
+  /*position: relative;*/
+  /*top: -26px;*/
 }
 
 .section-img-med {
