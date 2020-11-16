@@ -620,6 +620,7 @@ button:hover:not(.sliderBtn) {
 .carousel-container {
   overflow: hidden;
   position: relative;
+  height: 100vh;
   /* top: 14.6px; */
 }
 
